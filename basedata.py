@@ -42,13 +42,13 @@ CC = 4187
 L = 1.15
 #coolant line length
 
-moldmatname1 = "316 Steel" 
+moldmatname = "316 Steel" 
 #name of  mold material
-mat1PM = 7930.
+PM = 7930.
 #Mold density kg/m^3: 316 steel
-mat1CM = 510.
+CM = 510.
 #Mold specific heat 316 steel
-mat1fancye = 0.00015
+fancye = 0.00015
 #average height of pipe surface irregularities (m) 316 steel
-mat1KM = 16.5
+KM = 16.5
 #thermal conductivity of mold: 316 steel

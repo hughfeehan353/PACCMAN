@@ -35,33 +35,13 @@ CC = 4186
 L = 1.15
 #coolant line length
 
-moldmatname1 = "1045 Steel" 
+moldmatname = "1045 Steel" 
 #name of first mold material
-moldmatname2 = "1045 Steel" 
-#name of second mold material
-moldmatname3 = "1045 Steel" 
-#name of third mold material
-mat1PM = 7850
+PM = 7850
 #First comparison Mold density kg/m^3
-mat2PM = 7850
-#Second comparison Mold density kg/m^3
-mat3PM = 7850
-#Third comparison Mold density kg/m^
-mat1CM = 486
+CM = 486
 #First comparison Mold specific heat
-mat2CM = 486
-#Second comparison Mold specific heat
-mat3CM = 486
-#Third comparison Mold specific heat
-mat1fancye = 0.0004
+fancye = 0.0004
 #First comparison average height of pipe surface irregularities (m) 
-mat2fancye = 0.0004
-#Second comparison average height of pipe surface irregularities (m)
-mat3fancye = 0.0004
-#Third comparison average height of pipe surface irregularities (m)
-mat1KM = 49.8
+KM = 49.8
 #First comparison thermal conductivity of mold
-mat2KM = 49.8
-#Second comparison thermal conductivity of mold
-mat3KM = 49.8
-#Third comparison thermal conductivity of mold

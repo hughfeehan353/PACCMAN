@@ -99,8 +99,8 @@ if programfunction == "N" or programfunction == "n" or programfunction == "H" or
     PR = PRfunc(data.DV,data.CC,data.KC)
     print ("Prandl number:", PR)
 
-    DF = DFfunc(data.mat1fancye,data.D,RE)
-    print ("Darcy friction factor (",data.moldmatname1,"):", DF)
+    DF = DFfunc(data.fancye,data.D,RE)
+    print ("Darcy friction factor (",data.moldmatname,"):", DF)
         
     if programfunction == "H" or programfunction == "h":
         h1 = htc(data.KC,data.D,DBNU(RE,PR))
@@ -123,28 +123,28 @@ if programfunction == "N" or programfunction == "n" or programfunction == "H" or
             #heat transfer coefficient
         
     if programfunction == "H" or programfunction == "h":
-        ATM1 = ATMfunc(data.PP,data.CP,data.LP,data.mat1KM,data.W,h1,data.D,data.LM,data.TMelt,data.TEject,data.TCycle,data.TC)
+        ATM1 = ATMfunc(data.PP,data.CP,data.LP,data.KM,data.W,h1,data.D,data.LM,data.TMelt,data.TEject,data.TCycle,data.TC)
         print ("temperature of the mold (Ditus-Boelter):", ATM1)
-        ATM2 = ATMfunc(data.PP,data.CP,data.LP,data.mat1KM,data.W,h2,data.D,data.LM,data.TMelt,data.TEject,data.TCycle,data.TC)
+        ATM2 = ATMfunc(data.PP,data.CP,data.LP,data.KM,data.W,h2,data.D,data.LM,data.TMelt,data.TEject,data.TCycle,data.TC)
         print ("temperature of the mold (Gnielinski):", ATM2)
-        ATM3 = ATMfunc(data.PP,data.CP,data.LP,data.mat1KM,data.W,h3,data.D,data.LM,data.TMelt,data.TEject,data.TCycle,data.TC)
+        ATM3 = ATMfunc(data.PP,data.CP,data.LP,data.KM,data.W,h3,data.D,data.LM,data.TMelt,data.TEject,data.TCycle,data.TC)
         print ("temperature of the mold (Sieder-Tate):", ATM3)
     
     elif programfunction == "N" or programfunction == "n":
-        ATM1 = ATMfunc(data.PP,data.CP,data.LP,data.mat1KM,data.W,h1,data.D,data.LM,data.TMelt,data.TEject,data.TCycle,data.TC)
+        ATM1 = ATMfunc(data.PP,data.CP,data.LP,data.KM,data.W,h1,data.D,data.LM,data.TMelt,data.TEject,data.TCycle,data.TC)
         print ("temperature of the mold:", ATM1)
         #Average temperature of the mold
         
     if programfunction == "H" or programfunction == "h":
-        TConstant1 = TConstantfunc(data.mat1PM,data.mat1CM,data.LM,data.mat1KM,data.W,h1,data.D)
-        TConstant2 = TConstantfunc(data.mat1PM,data.mat1CM,data.LM,data.mat1KM,data.W,h2,data.D)
-        TConstant3 = TConstantfunc(data.mat1PM,data.mat1CM,data.LM,data.mat1KM,data.W,h3,data.D)
+        TConstant1 = TConstantfunc(data.PM,data.CM,data.LM,data.KM,data.W,h1,data.D)
+        TConstant2 = TConstantfunc(data.PM,data.CM,data.LM,data.KM,data.W,h2,data.D)
+        TConstant3 = TConstantfunc(data.PM,data.CM,data.LM,data.KM,data.W,h3,data.D)
         print ("time constant (Ditus-Boelter):", TConstant1)
         print ("time constant (Gnielinski):", TConstant2)
         print ("time constant (Sieder-Tate):", TConstant3)
         
     elif programfunction == "N" or programfunction == "n":
-        TConstant1 = TConstantfunc(data.mat1PM,data.mat1CM,data.LM,data.mat1KM,data.W,h1,data.D)
+        TConstant1 = TConstantfunc(data.PM,data.CM,data.LM,data.KM,data.W,h1,data.D)
         print ("time constant", TConstant1)
         #Time constant
 
